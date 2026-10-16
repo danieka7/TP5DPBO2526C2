@@ -1,20 +1,23 @@
-# Tugas Praktikum 4 - Desain Pemrograman Berorientasi Objek
+# Tugas Praktikum 5 - Desain Pemrograman Berorientasi Objek
 
 ## Janji
-Saya **Dani Eka Saputra** dengan NIM **2501158** mengerjakan Tugas Praktikum 4 pada Mata Kuliah Desain Pemrograman Berorientasi Objek untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
+Saya **Dani Eka Saputra** dengan NIM **2501158** mengerjakan Tugas Praktikum 5 pada Mata Kuliah Desain Pemrograman Berorientasi Objek untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 
-Repository ini merupakan implementasi aplikasi GUI untuk manajemen data produk menggunakan Java Swing. Program ini mendemonstrasikan penggunaan konsep OOP (Object-Oriented Programming) dengan GUI untuk operasi CRUD (Create, Read, Update, Delete) pada data produk.
+Repository ini merupakan implementasi aplikasi GUI untuk manajemen data person menggunakan Java Swing. Program ini mendemonstrasikan penggunaan konsep OOP (Object-Oriented Programming) dengan GUI untuk operasi CRUD (Create, Read, Update, Delete) pada data person.
 
-Program ini merupakan implementasi dari konsep OOP dengan tema **People (PeopleData)**, yaitu data **pemain profesional (pro player) Valorant** dunia nyata. Program dibuat dengan **Java Swing** (GUI) dan memanfaatkan class **Person** sebagai model data serta class **PeopleMenu** sebagai tampilan dan pengatur logika. Data awal dibuat secara statis (hardcode) pada `ArrayList` dan ditampilkan dalam `JTable`.
+Program ini merupakan implementasi dari konsep OOP dengan tema **People (PeopleData)**, yaitu data **pemain profesional (pro player) Valorant** dunia nyata. Program dibuat dengan **Java Swing** (GUI) dan memanfaatkan class **Person** sebagai model data serta class **PeopleMenu** sebagai tampilan dan pengatur logika. 
+Program ini merupakan lanjutan dari TP4, data yang diinputkan disimpan ke dalam database dan ditampilkan dalam ```JTable```.
 
 ## 🗂️ Struktur Projek
 ```
 .
 ├── dokumentasi
 │   ├── tampilan_awal.png
+│   ├── tampilan_tambah.png
 │   ├── tampilan_edit.png
 │   └── konfirmasi_hapus.png
 ├── PeopleData
+│   ├── Database.java
 │   ├── PeopleMenu.form
 │   ├── PeopleMenu.java
 │   └── Person.java
@@ -29,11 +32,12 @@ Program ini merupakan implementasi dari konsep OOP dengan tema **People (PeopleD
 - **Menghapus** data yang dipilih dari tabel dengan **confirmation prompt** (tombol **Delete**)
 - **Membatalkan** pengisian atau pemilihan data (tombol **Cancel**)
 - **Validasi input**: semua field wajib diisi, tahun lahir harus angka dan masuk akal (1900 sampai tahun sekarang), role dan skill level wajib dipilih, serta ID tidak boleh ganda
+- **Menyimpan data**: data pemain disimpan ke dalam database
+
 ## Desain dan Penjelasan
 
 ### Desain
-![desain](<Dokumentasi/TP4_design.png>)
-
+![desain](<Dokumentasi/TP5_design.png>)
 
 
 ### Struktur Data Kelas
@@ -75,14 +79,6 @@ Program ini merupakan implementasi dari konsep OOP dengan tema **People (PeopleD
   | setButtonState()       | Mengatur teks tombol dan tampilan tombol Delete sesuai mode           |
   | setComboBox(), setRadioButton(), setButtonAction() | Pengaturan awal component                 |
 
-### Data Awal (Hardcode)
-| ID    | Nama      | Negara    | Tahun Lahir | Kategori   | Skill Level      |
-| ----- | --------- | --------- | ----------- | ---------- | ---------------- |
-| PL001 | f0rsakeN  | Indonesia | 2004        | Duelist    | Masters Champion |
-| PL002 | mindfreak | Indonesia | 1999        | Controller | Masters Champion |
-| PL003 | Jinggg    | Singapura | 2003        | Duelist    | Masters Champion |
-| PL004 | TenZ      | Kanada    | 2001        | Duelist    | Masters Champion |
-| PL005 | aspas     | Brasil    | 2003        | Duelist    | World Champion   |
 
 ### Atribut Baru: Skill Level (JRadioButton)
 
@@ -109,11 +105,17 @@ Saat tombol **Delete** ditekan, program tidak langsung menghapus data. Method `d
       ![tambahData](<Dokumentasi/menambahData.png>)
     - #### Tampilan Setelah Menambah Data 
       ![setelahTambah](<Dokumentasi/setelahMenambah.png>)
+    - #### Setelah Menambah Data (dalam database) 
+      ![databaseSetelahTambah](<Dokumentasi/databaseSetelahMenambah.png>)
     - #### Tampilan Update Data 
       ![setelahTambah](<Dokumentasi/update.png>)
     - #### Tampilan Setelah Update
       ![setelahUpdate](<Dokumentasi/setelahUpdate.png>)
+    - #### Setelah Update (dalam database)
+      ![databaseSetelahUpdate](<Dokumentasi/databaseSetelahUpdate.png>)
     - #### Tampilan Delete
       ![delete](<Dokumentasi/delete.png>)
     - #### Tampilan Setelah Delete
       ![setelahDelete](<Dokumentasi/sesudahDelete.png>)
+    - ####  Setelah Delete (dalam database)
+      ![databaseSetelahDelete](<Dokumentasi/databaseSesudahDelete.png>)

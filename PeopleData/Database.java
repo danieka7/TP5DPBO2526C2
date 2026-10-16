@@ -9,7 +9,7 @@ public class Database {
     // constructor
     public Database() {
         try {
-            // membuka koneksi ke database db_people (sesuaikan user dan password dengan MySQL Anda)
+            // membuka koneksi ke database db_people
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/db_people",
                     "root",

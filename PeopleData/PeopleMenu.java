@@ -25,7 +25,7 @@ public class PeopleMenu {
     // addButton berfungsi ganda: "Add" (mode tambah) dan "Update" (mode edit)
     private JButton addButton;
     private JButton cancelButton;
-    // deleteButton hanya tampil saat mode edit (di-bind lewat GUI Designer)
+    // deleteButton hanya tampil saat mode edit
     private JButton deleteButton;
     private JTable tabelPlayer;
 
@@ -207,7 +207,7 @@ public class PeopleMenu {
             return;
         }
 
-        // ambil ID dan nama langsung dari tabel (tanpa ArrayList)
+        // ambil ID dan nama langsung dari tabel
         String id = tabelPlayer.getValueAt(row, 0).toString();
         String nama = tabelPlayer.getValueAt(row, 1).toString();
 
