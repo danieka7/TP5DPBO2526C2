@@ -12,10 +12,17 @@ Program ini merupakan lanjutan dari TP4, data yang diinputkan disimpan ke dalam 
 ```
 .
 ├── dokumentasi
-│   ├── tampilan_awal.png
-│   ├── tampilan_tambah.png
-│   ├── tampilan_edit.png
-│   └── konfirmasi_hapus.png
+│   ├── TP5_design.png
+│   ├── tampilanAwal.png
+│   ├── menambahData.png
+│   ├── setelahMenambah.png
+│   ├── databaseSetelahMenambah.png
+│   ├── update.png
+│   ├── setelahUpdate.png
+│   ├── databaseSetelahUpdate.png
+│   ├── delete.png
+│   ├── sesudahDelete.png
+│   └── databaseSesudahDelete_hapus.png
 ├── PeopleData
 │   ├── Database.java
 │   ├── PeopleMenu.form
@@ -41,6 +48,16 @@ Program ini merupakan lanjutan dari TP4, data yang diinputkan disimpan ke dalam 
 
 
 ### Struktur Data Kelas
+- #### Database
+  Kelas `Database` bertugas membuka koneksi ke database **MySQL** dan menjalankan query SQL
+  untuk program PeopleData (data pemain esport).
+
+    | Atribut      | Tipe         | Fungsi                                           |
+    |--------------|--------------|--------------------------------------------------|
+    | `connection` | `Connection` | Menyimpan koneksi aktif ke database `db_people`. |
+    | `statement`  | `Statement`  | Objek untuk mengirim query SQL ke database.      |
+
+    
 - #### Person
   | Atribut                       | Keterangan                                                   |
     | ----------------------------- | ------------------------------------------------------------ |
